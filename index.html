@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Đồng hồ TP.HCM - Round style</title>
-  <script src="https://cdn.logwork.com/widget/digital.js"></script>
+  <title>Text Clock TP.HCM</title>
+  <script src="https://cdn.logwork.com/widget/text.js"></script>
   <style>
     html, body {
       margin: 0; padding: 0;
@@ -12,22 +12,22 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      font-family: Arial, sans-serif;
     }
-    .digital-clock {
-      transform: scale(0.4); /* Thu nhỏ widget */
-      transform-origin: center;
-      width: auto !important;
-      height: auto !important;
+    .clock-widget-text {
+      font-size: 2vw; /* Tự co giãn theo khung */
+      font-weight: bold;
+      color: #222;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
   <a href="https://logwork.com/current-time-in-ho-chi-minh-city-vietnam-ho-chi-minh"
-     class="digital-clock"
-     data-style="round"
-     data-size="345"
+     class="clock-widget-text"
      data-timezone="Asia/Phnom_Penh"
      data-language="en">
+     Ho Chi Minh City, Vietnam
   </a>
 </body>
 </html>
