@@ -2,64 +2,43 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
-  <title>Đồng hồ Flip TP.HCM</title>
-  <script src="https://cdn.logwork.com/widget/digital.js"></script>
+  <title>Giờ hiện tại - TP.HCM (text)</title>
+  <script src="https://cdn.logwork.com/widget/text.js"></script>
   <style>
     html, body {
       margin: 0;
       padding: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background: transparent;
-      height: 100%;
+      font-family: sans-serif;
+    }
+
+    .clock-wrapper {
       width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      text-align: center;
+      font-size: 2vw; /* Responsive theo khung */
     }
 
-    .scale-wrapper {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .clock-inner {
-      transform-origin: top left;
-      transform: scale(var(--scale-factor));
-    }
-
-    .digital-clock {
-      width: auto !important;
-      height: auto !important;
+    .clock-widget-text {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      display: inline-block;
     }
   </style>
 </head>
 <body>
-  <div class="scale-wrapper">
-    <div class="clock-inner">
-      <a href="https://logwork.com/current-time-in-ho-chi-minh-city-vietnam-ho-chi-minh"
-         class="digital-clock"
-         data-style="flip"
-         data-size="300"
-         data-timezone="Asia/Phnom_Penh"
-         data-language="en">
-      </a>
-    </div>
+  <div class="clock-wrapper">
+    <a href="https://logwork.com/current-time-in-ho-chi-minh-city-vietnam-ho-chi-minh"
+       class="clock-widget-text"
+       data-timezone="Asia/Phnom_Penh"
+       data-language="vi">
+       TP.HCM: <span id="time">loading...</span>
+    </a>
   </div>
-
-  <script>
-    function adjustScale() {
-      const wrapper = document.querySelector(".scale-wrapper");
-      const inner = document.querySelector(".clock-inner");
-      const baseWidth = 300; // based on data-size
-
-      const scale = wrapper.clientWidth / baseWidth;
-      inner.style.setProperty("--scale-factor", scale);
-    }
-
-    window.addEventListener("resize", adjustScale);
-    window.addEventListener("load", adjustScale);
-  </script>
 </body>
 </html>
