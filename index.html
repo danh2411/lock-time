@@ -1,44 +1,36 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Giờ hiện tại - TP.HCM (text)</title>
-  <script src="https://cdn.logwork.com/widget/text.js"></script>
+  <title>Clock Flip HCM</title>
+  <script src="https://cdn.logwork.com/widget/digital.js"></script>
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
+      background: transparent;
       width: 100%;
+      height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-      background: transparent;
-      font-family: sans-serif;
     }
 
-    .clock-wrapper {
-      width: 100%;
-      text-align: center;
-      font-size: 2vw; /* Responsive theo khung */
-    }
-
-    .clock-widget-text {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      display: inline-block;
+    .digital-clock {
+      width: auto !important;
+      height: auto !important;
+      transform: scale(0.4); /* Giảm kích cỡ xuống ~40% */
+      transform-origin: center;
     }
   </style>
 </head>
 <body>
-  <div class="clock-wrapper">
-    <a href="https://logwork.com/current-time-in-ho-chi-minh-city-vietnam-ho-chi-minh"
-       class="clock-widget-text"
-       data-timezone="Asia/Phnom_Penh"
-       data-language="vi">
-       TP.HCM: <span id="time">loading...</span>
-    </a>
-  </div>
+  <a href="https://logwork.com/current-time-in-ho-chi-minh-city-vietnam-ho-chi-minh"
+     class="digital-clock"
+     data-style="flip"
+     data-size="345"
+     data-timezone="Asia/Phnom_Penh"
+     data-language="en">
+  </a>
 </body>
 </html>
